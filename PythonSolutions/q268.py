@@ -15,9 +15,7 @@ class Solution:
         # Calculate the sum of the first 'n' natural numbers
         sum = int(((len(nums) * (len(nums) + 1)) / 2))
         # Calculate the sum of the numbers in the list
-        nums_sum = 0
-        for num in nums:
-            nums_sum = nums_sum + num
+        nums_sum = sum(nums)
         # Return the missing number
         return sum - nums_sum
     
