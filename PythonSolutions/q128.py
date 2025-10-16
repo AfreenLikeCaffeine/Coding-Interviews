@@ -1,5 +1,8 @@
 # Longest Consecutive Sequence - LeetCode 128
 
+from typing import List
+
+
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         """
