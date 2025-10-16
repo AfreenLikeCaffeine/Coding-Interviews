@@ -13,7 +13,7 @@ class Solution:
         :rtype: int
         """
         # Calculate the sum of the first 'n' natural numbers
-        sum = int(((len(nums) * (len(nums) + 1)) / 2))
+        sum = (len(nums) * (len(nums) + 1)) // 2
         # Calculate the sum of the numbers in the list
         nums_sum = sum(nums)
         # Return the missing number
