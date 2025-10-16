@@ -1,0 +1,26 @@
+# Missing Number - LeetCode 268
+
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        """
+        This function takes a list of numbers and returns the missing number from the list.
+        
+        The missing number is calculated by subtracting the sum of the numbers in the list from the sum of the first 'n' natural numbers.
+        
+        :param nums: A list of numbers.
+        :type nums: List[int]
+        :return: The missing number from the list.
+        :rtype: int
+        """
+        # Calculate the sum of the first 'n' natural numbers
+        sum = int(((len(nums) * (len(nums) + 1)) / 2))
+        # Calculate the sum of the numbers in the list
+        nums_sum = 0
+        for num in nums:
+            nums_sum = nums_sum + num
+        # Return the missing number
+        return sum - nums_sum
+    
+        # Time complexity: O(n)
+        # Space complexity: O(1)
+        
