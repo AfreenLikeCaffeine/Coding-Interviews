@@ -1,4 +1,5 @@
 # Container with Most Water - LeetCode 11
+from typing import List
 
 class Solution:
     def maxArea(self, height: List[int]) -> int:
