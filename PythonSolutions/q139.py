@@ -24,5 +24,5 @@ class Solution:
 
         return dp[0]
 
-# Time complexity: O(n * m^2)
+# Time complexity: O(n * m * k), where n = len(s), m = len(wordDict), k = average length of words in wordDict
 # Space complexity: O(n)
