@@ -17,7 +17,7 @@ class Solution:
         parans = {
             ')': '(',
             ']': '[',
-            '}':'{'
+            '}': '{'
         }
         for char in s:
             # If it is an opening brace then append it to the stack
