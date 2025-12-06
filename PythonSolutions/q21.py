@@ -30,16 +30,16 @@ class Solution:
         
         # Determine which list has the smaller value
         if list1.val <= list2.val:
-            newNode = list1
+            new_node = list1
             # Recursively call the function to merge the remaining lists
-            newNode.next = self.mergeTwoLists(list1.next, list2)
+            new_node.next = self.mergeTwoLists(list1.next, list2)
         else:
-            newNode = list2
+            new_node = list2
             # Recursively call the function to merge the remaining lists
-            newNode.next = self.mergeTwoLists(list1, list2.next)
+            new_node.next = self.mergeTwoLists(list1, list2.next)
         
         # Return the merged list
-        return newNode
+        return new_node
 
 # Time complexity: O(n)
 # Space complexity: O(n)        
