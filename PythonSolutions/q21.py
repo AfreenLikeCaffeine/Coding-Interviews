@@ -22,10 +22,10 @@ class Solution:
         """
 
         # If the first list is empty, return the second list
-        if list1 == None:
+        if list1 is None:
             return list2
         # If the second list is empty, return the first list
-        if list2 == None:
+        if list2 is None:
             return list1
         
         # Determine which list has the smaller value
