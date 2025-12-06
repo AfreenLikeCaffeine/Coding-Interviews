@@ -35,10 +35,7 @@ class Solution:
                 else:
                     stack.pop()
         # The whole stack got popped which means the parentheses are valid
-        if len(stack) == 0:
-            return True
-        # There are still some parentheses remaining in the stack
-        return False
+        return not stack
 
 # Space Complexity: O(n)
 # Time Complexity: O(n)            
