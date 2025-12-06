@@ -21,7 +21,7 @@ class Solution:
         }
         for char in s:
             # If it is an opening brace then append it to the stack
-            if char == '(' or char == '[' or char == '{':
+            if char in '([{':
                 stack.append(char)
             # Has one type of closing brace
             elif char in '}])':
