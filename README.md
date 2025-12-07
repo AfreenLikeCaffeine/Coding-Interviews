@@ -1,20 +1,16 @@
-# Blind75
+# Coding Interviews
 
-This repository contains solutions to the Blind 75 LeetCode problems - a curated list of 75 essential coding interview questions.
-
-## About Blind75
-
-The Blind 75 is a list of 75 LeetCode problems that cover the most important patterns and concepts for technical interviews. These problems are widely recognized as essential preparation for software engineering interviews at top tech companies.
+A curated repository for coding interview preparation. It organizes practice problems and study materials across popular categories, starting with Python solutions for the classic Blind75 list while expanding to other must-know interview topics.
 
 ## Repository Structure
-
-- **PythonSolutions/**: Contains Python solutions to the Blind75 problems
-  - Solution files are named as `Q{number}.py` (e.g., `Q23.py`)
+- **Blind75/**: Python solutions to the Blind 75 interview problems, named by their LeetCode question numbers (with non-Blind75 standouts collected elsewhere).
+- **Important questions/**: Additional high-value problems that sit outside the classic Blind75 list.
+- **Data Structures/**: Space for notes, implementations, and practice problems focused on core data structures.
+- **Algorithms/**: Space for algorithm primers, patterns, and problem solutions beyond the Blind75 set.
 
 ## Getting Started
-
-Browse the `PythonSolutions/` folder to find solutions to specific problems. Each solution file corresponds to a problem from the Blind 75 list.
+- Browse the `Blind75/` directory to review the existing solutions.
+- Add new language solutions or topics by creating subfolders within `Data Structures/` or `Algorithms/`.
 
 ## Contributing
-
-This is a personal repository for tracking my progress through the Blind75 problems. Feel free to reference these solutions for learning purposes.
+This repository tracks ongoing interview preparation. Contributions that expand coverage with clear explanations or additional language solutions are welcome.
