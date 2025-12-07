@@ -21,9 +21,6 @@ class Solution:
         :rtype: int
         """
         
-        if not root:
-            return 0
-
         def findHeight(root) -> int:
             """
             This helper function is used to calculate the height of a subtree.
