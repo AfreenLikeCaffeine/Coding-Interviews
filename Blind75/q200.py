@@ -44,8 +44,8 @@ class Solution:
                 row, col = q.popleft()
                 # Check all four directions
                 dirs = [[0,1],[-1,0],[1,0],[0,-1]]
-                for dr,dc in dirs:
-                    r,c = row + dr, col + dc
+                for dr, dc in dirs:
+                    r, c = row + dr, col + dc
                     # Check if the cell is within the grid and is a "1" and has not been visited
                     if (r in range(rows) 
                         and c in range(cols) 
