@@ -25,7 +25,7 @@ class Solution:
         visited = set()
         islands = 0
 
-        def bfs(r,c):
+        def bfs(r, c):
             """
             This helper function performs a breadth-first search (BFS) from the given cell.
             
