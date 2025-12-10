@@ -57,7 +57,7 @@ class Solution:
         for r in range(rows):
             for c in range(cols):
                 # Check if the cell is a "1" and has not been visited
-                if (r,c) not in visited and grid[r][c] == "1":
+                if (r, c) not in visited and grid[r][c] == "1":
                     islands += 1
                     bfs(r, c)
         
