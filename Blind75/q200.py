@@ -2,6 +2,7 @@
 # https://leetcode.com/problems/number-of-islands/
 
 import collections
+from typing import List
 
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
