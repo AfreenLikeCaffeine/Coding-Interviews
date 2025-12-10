@@ -49,7 +49,7 @@ class Solution:
                     if (r in range(rows) 
                         and c in range(cols) 
                         and grid[r][c] == "1" 
-                        and (r,c) not in visited:
+                        and (r,c) not in visited):
                             visited.add((r,c))
                             q.append((r,c))
 

@@ -16,7 +16,11 @@ class Solution:
         :return: The indices of the two numbers in the list that add up to the target number
         :rtype: List[int]
         """
+        
+        # Initialize hash map as dict since you have return the indices
         hash_map = {}
+        
+        
         for i in range(len(nums)):
             # Check if the target number minus the current number is in the hash map
             if target - nums[i] in hash_map:

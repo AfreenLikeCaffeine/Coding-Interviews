@@ -19,6 +19,8 @@ class Solution:
             currVol = min(height[l], height[r]) * (r-l)
             # update the maximum volume if the current volume is greater
             maxVol = max(currVol,maxVol)
+            
+            # Keep moving the shorter wall inward
             # if the left line is shorter, move the left pointer to the right
             if height[l] < height[r]:
                 l+=1
