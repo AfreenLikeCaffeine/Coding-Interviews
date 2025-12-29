@@ -34,4 +34,6 @@ class Solution:
         # Space complexity: O(n)
 
 
-        
+if __name__ == "__main__":
+    from q1_test import run_tests
+    run_tests()
