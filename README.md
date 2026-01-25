@@ -2,6 +2,11 @@
 
 A curated repository for coding interview preparation. It organizes practice problems and study materials across popular categories, starting with Python solutions for the classic Blind75 list while expanding to other must-know interview topics.
 
+## Prerequisites
+
+- **Python 3.8+** (tested with Python 3.12)
+- No external dependencies required (uses only Python standard library)
+
 ## Repository Structure
 - **Blind75/**: Python solutions to the Blind 75 interview problems, named by their LeetCode question numbers.
 - **test_utils/**: Reusable test infrastructure for running and validating solutions.
