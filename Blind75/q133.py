@@ -1,14 +1,14 @@
 # Clone Graph - LeetCode 133
+# https://leetcode.com/problems/clone-graph/
 
-"""
-# Definition for a Node.
-class Node:
-    def __init__(self, val = 0, neighbors = None):
-        self.val = val
-        self.neighbors = neighbors if neighbors is not None else []
-"""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from typing import Optional
+from test_utils.data_structures import Node
+
+
 class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
         """
@@ -41,11 +41,11 @@ class Solution:
                 # Add the cloned neighbor to the cloned current node
                 clones[curr].neighbors.append(clones[neigh])
         return clones[node]
-        # Time complexity: O(V + E), where V is the number of vertices and E is the number of edges in the graph.
-        # Space complexity: O(V), for storing the cloned nodes in the dictionary.
-        
+
+# Time complexity: O(V + E), where V is the number of vertices and E is the number of edges in the graph.
+# Space complexity: O(V), for storing the cloned nodes in the dictionary.
 
 
-
-
-        
+if __name__ == "__main__":
+    from q133_test import run_tests
+    run_tests()

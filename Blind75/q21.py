@@ -1,11 +1,14 @@
 # 21. Merge Two Sorted Lists
 # https://leetcode.com/problems/merge-two-sorted-lists/
 
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from typing import Optional
+from test_utils.data_structures import ListNode
+
+
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         """
@@ -42,4 +45,9 @@ class Solution:
         return new_node
 
 # Time complexity: O(n)
-# Space complexity: O(n)        
+# Space complexity: O(n)
+
+
+if __name__ == "__main__":
+    from q21_test import run_tests
+    run_tests()        

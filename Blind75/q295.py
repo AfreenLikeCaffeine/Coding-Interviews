@@ -1,6 +1,9 @@
 # 295. Find Median from Data Stream
 # https://leetcode.com/problems/find-median-from-data-stream/
 
+import heapq
+
+
 class MedianFinder:
 
     def __init__(self):
@@ -81,3 +84,8 @@ class MedianFinder:
 
 # Time Complexity: O(log n) for addNum and O(1) for findMedian
 # Space Complexity: O(n) where n is the number of elements added to the MedianFinder
+
+
+if __name__ == "__main__":
+    from q295_test import run_tests
+    run_tests()
