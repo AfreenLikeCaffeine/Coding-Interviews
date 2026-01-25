@@ -1,12 +1,14 @@
 # 98. Validate Binary Search Tree
 # https://leetcode.com/problems/validate-binary-search-tree/
 
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from typing import Optional
+from test_utils.data_structures import TreeNode
+
+
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         """
@@ -54,3 +56,8 @@ class Solution:
 
 # Time Complexity: O(n)
 # Space Complexity: O(h) where h is the height of the tree
+
+
+if __name__ == "__main__":
+    from q98_test import run_tests
+    run_tests()

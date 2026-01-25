@@ -1,6 +1,9 @@
 # 238. Product of Array Except Self
 # https://leetcode.com/problems/product-of-array-except-self/
 
+from typing import List
+
+
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         """
@@ -30,3 +33,8 @@ class Solution:
 
 # Time complexity: O(n)
 # Space complexity: O(1) (excluding the output list)
+
+
+if __name__ == "__main__":
+    from q238_test import run_tests
+    run_tests()

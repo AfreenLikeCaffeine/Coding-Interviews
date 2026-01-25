@@ -1,6 +1,9 @@
 # 56. Merge Intervals
 # https://leetcode.com/problems/merge-intervals/
 
+from typing import List
+
+
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         """
@@ -28,6 +31,11 @@ class Solution:
                 output.append([start,end])
         
         return output
-    
+
 # Time Complexity: O(n log n) due to the sorting step, where n is the number of intervals.
 # Space Complexity: O(n) for the output list, where n is the number of intervals.
+
+
+if __name__ == "__main__":
+    from q56_test import run_tests
+    run_tests()

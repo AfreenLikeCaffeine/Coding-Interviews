@@ -1,6 +1,9 @@
 # 33. Search in Rotated Sorted Array
 # https://leetcode.com/problems/search-in-rotated-sorted-array/
 
+from typing import List
+
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         """
@@ -43,6 +46,10 @@ class Solution:
         # If the target is not found, return -1
         return -1
 
-        
 # Time complexity: O(log n)
 # Space complexity: O(1)
+
+
+if __name__ == "__main__":
+    from q33_test import run_tests
+    run_tests()

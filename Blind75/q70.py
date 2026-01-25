@@ -35,5 +35,10 @@ class Solution:
         # call the recursive helper function
         return self._climb_stairs_recursion(n, sols)
 
-        # Time complexity: O(n)
-        # Space complexity: O(n)
+# Time complexity: O(n)
+# Space complexity: O(n)
+
+
+if __name__ == "__main__":
+    from q70_test import run_tests
+    run_tests()

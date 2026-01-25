@@ -1,5 +1,8 @@
-#153. Find Minimum in Rotated Sorted Array
+# 153. Find Minimum in Rotated Sorted Array
 # https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+
+from typing import List
+
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
@@ -34,3 +37,8 @@ class Solution:
 
 # Time complexity: O(log n)
 # Space complexity: O(1)
+
+
+if __name__ == "__main__":
+    from q153_test import run_tests
+    run_tests()

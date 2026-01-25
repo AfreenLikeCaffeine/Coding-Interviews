@@ -1,5 +1,9 @@
 # Group Anagrams - LeetCode 49
 
+from typing import List
+from collections import defaultdict
+
+
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         """
@@ -30,6 +34,11 @@ class Solution:
             res[tuple(count)].append(s)
 
         return list(res.values())
-    
-        # Time complexity: O(n * k) where n is the number of strings and k is the maximum length of a string
-        # Space complexity: O(n * k) where n is the number of strings and k is the maximum length of a string
+
+# Time complexity: O(n * k) where n is the number of strings and k is the maximum length of a string
+# Space complexity: O(n * k) where n is the number of strings and k is the maximum length of a string
+
+
+if __name__ == "__main__":
+    from q49_test import run_tests
+    run_tests()

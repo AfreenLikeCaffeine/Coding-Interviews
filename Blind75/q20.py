@@ -38,5 +38,9 @@ class Solution:
         return not stack
 
 # Space Complexity: O(n)
-# Time Complexity: O(n)            
-        
+# Time Complexity: O(n)
+
+
+if __name__ == "__main__":
+    from q20_test import run_tests
+    run_tests()

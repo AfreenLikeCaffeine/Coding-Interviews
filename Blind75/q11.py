@@ -31,3 +31,8 @@ class Solution:
 
         # Time complexity: O(n)
         # Space complexity: O(1)
+
+
+if __name__ == "__main__":
+    from q11_test import run_tests
+    run_tests()

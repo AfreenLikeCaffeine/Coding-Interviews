@@ -30,5 +30,10 @@ class Solution:
                     max_length = current_length
         return max_length
 
-        # Time complexity: O(n)
-        # Space complexity: O(n)        
+# Time complexity: O(n)
+# Space complexity: O(n)
+
+
+if __name__ == "__main__":
+    from q128_test import run_tests
+    run_tests()
