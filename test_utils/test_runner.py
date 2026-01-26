@@ -200,6 +200,12 @@ class ClassTestRunner:
 
         return all(r.status == TestResultStatus.PASSED for r in results)
 
+    def _values_equal(self, actual, expected) -> bool:
+        """Compare values with float tolerance."""
+        if isinstance(actual, float) and isinstance(expected, float):
+            return abs(actual - expected) < 1e-5
+        return actual == expected
+
     def _run_single_test(self, test_case: Dict) -> TestResult:
         """Run a single test case for class-based problem."""
         try:
@@ -222,7 +228,7 @@ class ClassTestRunner:
                     actual_outputs.append(result)
 
                     # Check individual result if not None
-                    if expected_val is not None and result != expected_val:
+                    if expected_val is not None and not self._values_equal(result, expected_val):
                         return TestResult(
                             test_case['name'],
                             TestResultStatus.FAILED,
