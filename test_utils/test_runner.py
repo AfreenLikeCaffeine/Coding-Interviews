@@ -9,7 +9,6 @@ This module provides test runners to execute test cases and report results:
 
 from typing import List, Dict, Any, Callable, Optional
 from enum import Enum
-import traceback
 
 
 class TestResultStatus(Enum):
