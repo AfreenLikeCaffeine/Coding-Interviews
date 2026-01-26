@@ -7,8 +7,6 @@ This module defines common data structures used across LeetCode problems:
 - Node: Graph node with neighbors list
 """
 
-from typing import Optional, List
-
 
 class ListNode:
     """Definition for singly-linked list."""
