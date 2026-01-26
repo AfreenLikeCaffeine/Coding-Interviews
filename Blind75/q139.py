@@ -1,3 +1,9 @@
+# 139. Word Break
+# https://leetcode.com/problems/word-break/
+
+from typing import List
+
+
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         """
@@ -26,3 +32,8 @@ class Solution:
 
 # Time complexity: O(n * m * k), where n = len(s), m = len(wordDict), k = average length of words in wordDict
 # Space complexity: O(n)
+
+
+if __name__ == "__main__":
+    from q139_test import run_tests
+    run_tests()

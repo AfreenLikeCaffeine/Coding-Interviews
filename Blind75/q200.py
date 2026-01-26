@@ -62,6 +62,11 @@ class Solution:
                     bfs(r, c)
         
         return islands
-        
-        # Time Complexity: O(m*n) where m is the number of rows and n is the number of columns
-        # Space Complexity: O(m*n) where m is the number of rows and n is the number of columns
+
+# Time Complexity: O(m*n) where m is the number of rows and n is the number of columns
+# Space Complexity: O(m*n) where m is the number of rows and n is the number of columns
+
+
+if __name__ == "__main__":
+    from q200_test import run_tests
+    run_tests()

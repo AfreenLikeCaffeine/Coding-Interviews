@@ -1,6 +1,9 @@
 # 39. Combination Sum
 # https://leetcode.com/problems/combination-sum/
 
+from typing import List
+
+
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         """
@@ -41,7 +44,11 @@ class Solution:
 
         dfs(0, [], 0)
         return sol_list
-        
-        
+
 # Time complexity: O(2^n)
 # Space complexity: O(n)
+
+
+if __name__ == "__main__":
+    from q39_test import run_tests
+    run_tests()

@@ -21,7 +21,11 @@ class Solution:
         nums_sum = sum(nums)
         # Return the missing number
         return total - nums_sum
-    
-        # Time complexity: O(n)
-        # Space complexity: O(1)
-        
+
+# Time complexity: O(n)
+# Space complexity: O(1)
+
+
+if __name__ == "__main__":
+    from q268_test import run_tests
+    run_tests()

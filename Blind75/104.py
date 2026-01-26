@@ -1,12 +1,14 @@
 # 104. Maximum Depth of Binary Tree
 # https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from typing import Optional
+from test_utils.data_structures import TreeNode
+
+
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         """
@@ -39,6 +41,13 @@ class Solution:
             return 1 + max(findHeight(root.left), findHeight(root.right))
         
         return findHeight(root)
-        
+
 # Time Complexity: O(n)
 # Space Complexity: O(h) where h is the height of the tree
+
+
+if __name__ == "__main__":
+    # Import with underscore version to match test file naming
+    from importlib import import_module
+    test_module = import_module("104_test")
+    test_module.run_tests()

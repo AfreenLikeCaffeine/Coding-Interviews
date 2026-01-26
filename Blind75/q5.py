@@ -38,4 +38,9 @@ class Solution:
         return res
 
         # Time complexity: O(n^2)
-        # Space complexity: O(1)        
+        # Space complexity: O(1)
+
+
+if __name__ == "__main__":
+    from q5_test import run_tests
+    run_tests()
