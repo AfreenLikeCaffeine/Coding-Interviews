@@ -26,8 +26,6 @@ python Blind75/q1.py
 python Blind75/q1_test.py
 ```
 
-All 22 Blind75 problems have test coverage with 93+ test cases total.
-
 ## Adding a New Problem
 
 1. Create the solution file `Blind75/qN.py`:
