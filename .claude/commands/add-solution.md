@@ -94,7 +94,16 @@ def run_tests():
 
     sys.path.insert(0, str(Path(__file__).parent.parent))
 
+    # For folders without spaces (e.g., Blind75):
     from {folder}.q{N} import Solution
+
+    # For folders with spaces (e.g., "Important questions"), use importlib:
+    # import importlib.util
+    # spec = importlib.util.spec_from_file_location("q{N}", Path(__file__).parent / "q{N}.py")
+    # module = importlib.util.module_from_spec(spec)
+    # spec.loader.exec_module(module)
+    # Solution = module.Solution
+
     from test_utils.test_runner import TestRunner
 
     runner = TestRunner(Solution, "{methodName}")
@@ -117,14 +126,14 @@ Ask the user for test cases. For each test case, gather:
 - Input values (matching the method parameters)
 - Expected output
 
-Include at minimum:
+Include at a minimum:
 - The LeetCode example test cases (usually 2-3)
 - At least one edge case
 
-For problems using data structures, use the appropriate builders:
-- **Linked lists**: `{"head": [1, 2, 3]}` with `input_transformer={"head": build_linked_list}`
-- **Binary trees**: `{"root": [3, 9, 20, None, None, 15, 7]}` with `input_transformer={"root": build_tree}`
-- **Graphs**: Use `build_graph` for adjacency lists
+For problems using data structures, manually transform inputs before calling `add_test()`:
+- **Linked lists**: Store as `{"head": [1, 2, 3]}` in test data, then transform with `build_linked_list(inputs["head"])`
+- **Binary trees**: Store as `{"root": [3, 9, 20, None, None, 15, 7]}`, then transform with `build_tree(inputs["root"])`
+- **Graphs**: Store adjacency lists as plain Python, then transform with `build_graph()`
 
 ### 5. Verify the Solution
 
@@ -164,10 +173,16 @@ runner.add_test(
 
 ### Problems with Complex Output Comparison
 
-For problems where output order doesn't matter, use comparators:
+For problems where output order doesn't matter, pass comparator to `add_test()`:
 
 ```python
 from test_utils.comparators import compare_2d_lists
 
-runner = TestRunner(Solution, "methodName", comparator=lambda a, e: compare_2d_lists(a, e, order_matters=False))
+runner = TestRunner(Solution, "methodName")
+
+for name, inputs, expected in get_test_cases():
+    runner.add_test(
+        name, inputs, expected,
+        comparator=lambda a, e: compare_2d_lists(a, e, order_matters=False)
+    )
 ```

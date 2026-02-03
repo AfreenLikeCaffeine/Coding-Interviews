@@ -181,11 +181,14 @@ Document time and space complexity:
 from test_utils.builders import build_linked_list
 from test_utils.comparators import compare_linked_lists
 
-runner = TestRunner(
-    Solution, "reverseList",
-    input_transformer={"head": build_linked_list},
-    comparator=compare_linked_lists
-)
+runner = TestRunner(Solution, "reverseList")
+
+for name, inputs, expected_list in get_test_cases():
+    # Transform inputs manually
+    actual_inputs = {"head": build_linked_list(inputs["head"])}
+    expected = build_linked_list(expected_list)
+    # Pass comparator to add_test
+    runner.add_test(name, actual_inputs, expected, compare_linked_lists)
 ```
 
 ### Binary Trees
@@ -194,11 +197,12 @@ runner = TestRunner(
 from test_utils.builders import build_tree
 from test_utils.comparators import compare_trees
 
-runner = TestRunner(
-    Solution, "invertTree",
-    input_transformer={"root": build_tree},
-    comparator=compare_trees
-)
+runner = TestRunner(Solution, "invertTree")
+
+for name, inputs, expected_list in get_test_cases():
+    actual_inputs = {"root": build_tree(inputs["root"])}
+    expected = build_tree(expected_list)
+    runner.add_test(name, actual_inputs, expected, compare_trees)
 ```
 
 ### Design Problems
@@ -219,7 +223,7 @@ runner.add_test(
 
 ## Test Case Guidelines
 
-Include at minimum:
+Include at a minimum:
 - **LeetCode examples**: The 2-3 examples from the problem description
 - **Edge cases**: Empty input, single element, large values, etc.
 - **Boundary conditions**: Min/max constraints from the problem
