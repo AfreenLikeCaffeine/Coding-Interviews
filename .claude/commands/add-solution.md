@@ -57,7 +57,11 @@ d) **Ensure complexity comments** are present at the bottom:
 
 ### 3. Create the Test File
 
-Create a test file at `{folder}/qN_test.py` with this structure:
+Create a test file at `{folder}/qN_test.py`.
+
+**IMPORTANT**: Check if the folder name contains spaces (e.g., "Important questions"). If it does, you MUST use the `importlib` pattern for imports instead of the standard `from folder.module import` syntax, because Python cannot import from paths with spaces.
+
+Use this structure:
 
 ```python
 """
@@ -94,10 +98,12 @@ def run_tests():
 
     sys.path.insert(0, str(Path(__file__).parent.parent))
 
-    # For folders without spaces (e.g., Blind75):
+    # USE ONE OF THESE PATTERNS:
+
+    # Pattern A - For folders WITHOUT spaces (e.g., Blind75):
     from {folder}.q{N} import Solution
 
-    # For folders with spaces (e.g., "Important questions"), use importlib:
+    # Pattern B - For folders WITH spaces (e.g., "Important questions"):
     # import importlib.util
     # spec = importlib.util.spec_from_file_location("q{N}", Path(__file__).parent / "q{N}.py")
     # module = importlib.util.module_from_spec(spec)
@@ -154,6 +160,27 @@ After completion, provide a summary:
 - Remind user to commit when ready
 
 ## Special Cases
+
+### Folders with Spaces (e.g., "Important questions")
+
+When the folder name contains spaces, Python's standard import syntax won't work. Use `importlib` instead:
+
+```python
+def run_tests():
+    from pathlib import Path
+    import importlib.util
+
+    sys.path.insert(0, str(Path(__file__).parent.parent))
+
+    # Load module using importlib (required for folders with spaces)
+    spec = importlib.util.spec_from_file_location("q543", Path(__file__).parent / "q543.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    Solution = module.Solution
+
+    from test_utils.test_runner import TestRunner
+    # ... rest of test setup
+```
 
 ### Design Problems (ClassTestRunner)
 
