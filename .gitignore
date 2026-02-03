@@ -25,4 +25,6 @@ Thumbs.db
 
 # Project specific
 PythonSolutions/
-.claude/
+
+# Claude Code local settings (keep commands/ tracked for skills)
+.claude/settings.local.json

@@ -28,10 +28,23 @@ python Blind75/q1_test.py
 
 ## Adding a New Problem
 
+### Quick Method (with Claude Code)
+
+Use the `/add-solution` skill to automate the setup:
+
+1. Solve the problem on LeetCode and paste your solution into `Blind75/qN.py`
+2. Run `/add-solution Blind75/qN.py`
+3. Provide test cases when prompted
+4. Commit when tests pass
+
+The skill automatically refactors code to match conventions, creates test files, and verifies everything works.
+
+### Manual Method
+
 1. Create the solution file `Blind75/qN.py`:
 ```python
-# N. Problem Name
 # https://leetcode.com/problems/problem-name/
+# N. Problem Name
 
 from typing import List  # Add imports as needed
 
@@ -73,6 +86,8 @@ if __name__ == "__main__":
 ```
 
 3. Run your tests: `python Blind75/qN.py`
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ## Test Utilities
 
