@@ -1,5 +1,5 @@
-# Question Link: https://leetcode.com/problems/unique-paths/
 # 62. Unique Paths
+# https://leetcode.com/problems/unique-paths/
 
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
@@ -43,13 +43,13 @@ class Solution:
             # Calculate the number of paths from the cell
             paths_from_here[row][col] = (
                 count_paths(row + 1, col)
-              + count_paths(row, col + 1)
+                + count_paths(row, col + 1)
             )
             # Mark the cell as finished
             finished[row][col] = True
             return paths_from_here[row][col]
 
-        return count_paths(0,0)
+        return count_paths(0, 0)
 
 
 if __name__ == "__main__":
